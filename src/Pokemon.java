@@ -21,6 +21,12 @@ public abstract class Pokemon {
         this.type = type;
     }
 
+    // General attack method for all sorts of attacks
+    public void attack(Pokemon pokemon, Pokemon enemy, int attackPoints) {
+        enemy.setHp(enemy.getHp() - attackPoints);
+        System.out.println(enemy.getName() + " loses " + attackPoints + " hp.");
+    }
+
     public String getName() {
         return name;
     }
