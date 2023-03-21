@@ -31,6 +31,7 @@ public class WaterPokemon extends Pokemon{
                 super.attack(pokemon, enemy, attackPoints);
                 break;
         }
+        System.out.println("Remaning health points of " + enemy.getName() + ": " + enemy.getHp());
     }
 
     public void hydroPump(Pokemon pokemon, Pokemon enemy) {
@@ -55,6 +56,7 @@ public class WaterPokemon extends Pokemon{
                 super.attack(pokemon, enemy, attackPoints);
                 break;
         }
+        System.out.println("Remaning health points of " + enemy.getName() + ": " + enemy.getHp());
     }
 
     public void hydroCanon(Pokemon pokemon, Pokemon enemy) {
@@ -79,6 +81,7 @@ public class WaterPokemon extends Pokemon{
                 super.attack(pokemon, enemy, attackPoints);
                 break;
         }
+        System.out.println("Remaning health points of " + enemy.getName() + ": " + enemy.getHp());
     }
 
     public void rainDance(Pokemon pokemon, Pokemon enemy) {
@@ -96,13 +99,15 @@ public class WaterPokemon extends Pokemon{
                 break;
             case "grass":
                 attackPoints = 16;
+                enemy.setHp(enemy.getHp() + attackPoints);
                 System.out.println("Raindance gives " + attackPoints + " boost to Grass-types");
-                super.attack(pokemon, enemy, -(attackPoints));
+
                 break;
             case "electric":
                 System.out.println("Raindance has no effect on this enemy.");
                 break;
         }
+        System.out.println("Remaning health points of " + enemy.getName() + ": " + enemy.getHp());
     }
 
     public List<String> getAttacks() {

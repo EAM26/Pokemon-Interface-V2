@@ -32,6 +32,7 @@ public class FirePokemon extends Pokemon {
                 super.attack(pokemon, enemy, attackPoints);
                 break;
         }
+        System.out.println("Remaning health points of " + enemy.getName() + ": " + enemy.getHp());
     }
 
     public void pyroBall(Pokemon pokemon, Pokemon enemy) {
@@ -56,6 +57,7 @@ public class FirePokemon extends Pokemon {
                 super.attack(pokemon, enemy, attackPoints);
                 break;
         }
+        System.out.println("Remaning health points of " + enemy.getName() + ": " + enemy.getHp());
     }
 
     public void fireLash(Pokemon pokemon, Pokemon enemy) {
@@ -80,6 +82,7 @@ public class FirePokemon extends Pokemon {
                 super.attack(pokemon, enemy, attackPoints);
                 break;
         }
+        System.out.println("Remaning health points of " + enemy.getName() + ": " + enemy.getHp());
     }
 
     public void flameThrower(Pokemon pokemon, Pokemon enemy) {
@@ -104,6 +107,7 @@ public class FirePokemon extends Pokemon {
                 super.attack(pokemon, enemy, attackPoints);
                 break;
         }
+        System.out.println("Remaning health points of " + enemy.getName() + ": " + enemy.getHp());
     }
 
     public List<String> getAttacks() {

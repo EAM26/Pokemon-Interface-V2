@@ -30,6 +30,7 @@ public class GrassPokemon extends Pokemon{
                 super.attack(pokemon, enemy, attackPoints);
                 break;
         }
+        System.out.println("Remaning health points of " + enemy.getName() + ": " + enemy.getHp());
     }
 
     public void solarBeam(Pokemon pokemon, Pokemon enemy) {
@@ -54,6 +55,7 @@ public class GrassPokemon extends Pokemon{
                 super.attack(pokemon, enemy, attackPoints);
                 break;
         }
+        System.out.println("Remaning health points of " + enemy.getName() + ": " + enemy.getHp());
     }
 
     public void leechSeed(Pokemon pokemon, Pokemon enemy) {
@@ -86,6 +88,7 @@ public class GrassPokemon extends Pokemon{
                 pokemon.setHp(pokemon.getHp() + attackPoints);
                 break;
         }
+        System.out.println("Remaning health points of " + enemy.getName() + ": " + enemy.getHp());
     }
 
     public void leaveBlade(Pokemon pokemon, Pokemon enemy) {
@@ -110,6 +113,7 @@ public class GrassPokemon extends Pokemon{
                 super.attack(pokemon, enemy, attackPoints);
                 break;
         }
+        System.out.println("Remaning health points of " + enemy.getName() + ": " + enemy.getHp());
     }
 
     public List<String> getAttacks() {

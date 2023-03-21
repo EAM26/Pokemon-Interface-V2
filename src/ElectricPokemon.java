@@ -30,6 +30,7 @@ public class ElectricPokemon extends Pokemon{
                 super.attack(pokemon, enemy, attackPoints);
                 break;
         }
+        System.out.println("Remaning health points of " + enemy.getName() + ": " + enemy.getHp());
     }
 
     public void electroBall(Pokemon pokemon, Pokemon enemy) {
@@ -54,6 +55,7 @@ public class ElectricPokemon extends Pokemon{
                 super.attack(pokemon, enemy, attackPoints);
                 break;
         }
+        System.out.println("Remaning health points of " + enemy.getName() + ": " + enemy.getHp());
     }
 
     public void thunder(Pokemon pokemon, Pokemon enemy) {
@@ -79,6 +81,7 @@ public class ElectricPokemon extends Pokemon{
                 super.attack(pokemon, enemy, -(attackPoints));
                 break;
         }
+        System.out.println("Remaning health points of " + enemy.getName() + ": " + enemy.getHp());
     }
 
     public void voltTackle(Pokemon pokemon, Pokemon enemy) {
@@ -103,6 +106,7 @@ public class ElectricPokemon extends Pokemon{
                 super.attack(pokemon, enemy, attackPoints);
                 break;
         }
+        System.out.println("Remaning health points of " + enemy.getName() + ": " + enemy.getHp());
     }
 
     public List<String> getAttacks() {
