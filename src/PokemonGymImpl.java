@@ -113,6 +113,8 @@ public class PokemonGymImpl implements PokemonGym {
 
     @Override
     public String chooseAttackPlayer(Pokemon p){
+        String chosenFood = p.feed();
+        System.out.println("Chosen food is " + chosenFood);
         Scanner speler_A = new Scanner(System.in);
         String type = p.getType();
         switch (type) {
@@ -151,7 +153,6 @@ public class PokemonGymImpl implements PokemonGym {
         WaterPokemon water;
 
         String choosenAttack = attack.toLowerCase(Locale.ROOT);
-
         switch (pokemon.getType()) {
             case "fire" -> {
                 fire = new FirePokemon(pokemon.getName(), pokemon.getLevel(), pokemon.getHp(), pokemon.getFood(), pokemon.getSound());

@@ -15,19 +15,19 @@ public class ElectricPokemon extends Pokemon{
         switch (enemyType) {
             case "fire":
                 attackPoints = 10;
-                super.attack(pokemon, enemy, attackPoints);
+                super.attackCalc(pokemon, enemy, attackPoints);
                 break;
             case "water":
                 attackPoints = 25;
-                super.attack(pokemon, enemy, attackPoints);
+                super.attackCalc(pokemon, enemy, attackPoints);
                 break;
             case "grass":
                 attackPoints = 15;
-                super.attack(pokemon, enemy, attackPoints);
+                super.attackCalc(pokemon, enemy, attackPoints);
                 break;
             case "electric":
                 attackPoints = 5;
-                super.attack(pokemon, enemy, attackPoints);
+                super.attackCalc(pokemon, enemy, attackPoints);
                 break;
         }
         System.out.println("Remaning health points of " + enemy.getName() + ": " + enemy.getHp());
@@ -40,19 +40,19 @@ public class ElectricPokemon extends Pokemon{
         switch (enemyType) {
             case "fire":
                 attackPoints = 12;
-                super.attack(pokemon, enemy, attackPoints);
+                super.attackCalc(pokemon, enemy, attackPoints);
                 break;
             case "water":
                 attackPoints = 27;
-                super.attack(pokemon, enemy, attackPoints);
+                super.attackCalc(pokemon, enemy, attackPoints);
                 break;
             case "grass":
                 attackPoints = 17;
-                super.attack(pokemon, enemy, attackPoints);
+                super.attackCalc(pokemon, enemy, attackPoints);
                 break;
             case "electric":
                 attackPoints = 7;
-                super.attack(pokemon, enemy, attackPoints);
+                super.attackCalc(pokemon, enemy, attackPoints);
                 break;
         }
         System.out.println("Remaning health points of " + enemy.getName() + ": " + enemy.getHp());
@@ -65,20 +65,20 @@ public class ElectricPokemon extends Pokemon{
         switch (enemyType) {
             case "fire":
                 attackPoints = 14;
-                super.attack(pokemon, enemy, attackPoints);
+                super.attackCalc(pokemon, enemy, attackPoints);
                 break;
             case "water":
                 attackPoints = 29;
-                super.attack(pokemon, enemy, attackPoints);
+                super.attackCalc(pokemon, enemy, attackPoints);
                 break;
             case "grass":
                 attackPoints = 19;
-                super.attack(pokemon, enemy, attackPoints);
+                super.attackCalc(pokemon, enemy, attackPoints);
                 break;
             case "electric":
                 attackPoints = 9;
                 System.out.println("Thunder gives " + attackPoints + " boost to Electric-types");
-                super.attack(pokemon, enemy, -(attackPoints));
+                super.attackCalc(pokemon, enemy, -(attackPoints));
                 break;
         }
         System.out.println("Remaning health points of " + enemy.getName() + ": " + enemy.getHp());
@@ -91,19 +91,19 @@ public class ElectricPokemon extends Pokemon{
         switch (enemyType) {
             case "fire":
                 attackPoints = 16;
-                super.attack(pokemon, enemy, attackPoints);
+                super.attackCalc(pokemon, enemy, attackPoints);
                 break;
             case "water":
                 attackPoints = 31;
-                super.attack(pokemon, enemy, attackPoints);
+                super.attackCalc(pokemon, enemy, attackPoints);
                 break;
             case "grass":
                 attackPoints = 21;
-                super.attack(pokemon, enemy, attackPoints);
+                super.attackCalc(pokemon, enemy, attackPoints);
                 break;
             case "electric":
                 attackPoints = 11;
-                super.attack(pokemon, enemy, attackPoints);
+                super.attackCalc(pokemon, enemy, attackPoints);
                 break;
         }
         System.out.println("Remaning health points of " + enemy.getName() + ": " + enemy.getHp());

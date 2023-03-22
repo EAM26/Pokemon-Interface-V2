@@ -17,19 +17,19 @@ public class FirePokemon extends Pokemon {
         switch (enemyType) {
             case "fire":
                 attackPoints = 5;
-                super.attack(pokemon, enemy, attackPoints);
+                super.attackCalc(pokemon, enemy, attackPoints);
                 break;
             case "water":
                 attackPoints = 15;
-                super.attack(pokemon, enemy, attackPoints);
+                super.attackCalc(pokemon, enemy, attackPoints);
                 break;
             case "grass":
                 attackPoints = 25;
-                super.attack(pokemon, enemy, attackPoints);
+                super.attackCalc(pokemon, enemy, attackPoints);
                 break;
             case "electric":
                 attackPoints = 10;
-                super.attack(pokemon, enemy, attackPoints);
+                super.attackCalc(pokemon, enemy, attackPoints);
                 break;
         }
         System.out.println("Remaning health points of " + enemy.getName() + ": " + enemy.getHp());
@@ -42,19 +42,19 @@ public class FirePokemon extends Pokemon {
         switch (enemyType) {
             case "fire":
                 attackPoints = 7;
-                super.attack(pokemon, enemy, attackPoints);
+                super.attackCalc(pokemon, enemy, attackPoints);
                 break;
             case "water":
                 attackPoints = 17;
-                super.attack(pokemon, enemy, attackPoints);
+                super.attackCalc(pokemon, enemy, attackPoints);
                 break;
             case "grass":
                 attackPoints = 27;
-                super.attack(pokemon, enemy, attackPoints);
+                super.attackCalc(pokemon, enemy, attackPoints);
                 break;
             case "electric":
                 attackPoints = 12;
-                super.attack(pokemon, enemy, attackPoints);
+                super.attackCalc(pokemon, enemy, attackPoints);
                 break;
         }
         System.out.println("Remaning health points of " + enemy.getName() + ": " + enemy.getHp());
@@ -67,19 +67,19 @@ public class FirePokemon extends Pokemon {
         switch (enemyType) {
             case "fire":
                 attackPoints = 9;
-                super.attack(pokemon, enemy, attackPoints);
+                super.attackCalc(pokemon, enemy, attackPoints);
                 break;
             case "water":
                 attackPoints = 19;
-                super.attack(pokemon, enemy, attackPoints);
+                super.attackCalc(pokemon, enemy, attackPoints);
                 break;
             case "grass":
                 attackPoints = 29;
-                super.attack(pokemon, enemy, attackPoints);
+                super.attackCalc(pokemon, enemy, attackPoints);
                 break;
             case "electric":
                 attackPoints = 14;
-                super.attack(pokemon, enemy, attackPoints);
+                super.attackCalc(pokemon, enemy, attackPoints);
                 break;
         }
         System.out.println("Remaning health points of " + enemy.getName() + ": " + enemy.getHp());
@@ -92,19 +92,19 @@ public class FirePokemon extends Pokemon {
         switch (enemyType) {
             case "fire":
                 attackPoints = 11;
-                super.attack(pokemon, enemy, attackPoints);
+                super.attackCalc(pokemon, enemy, attackPoints);
                 break;
             case "water":
                 attackPoints = 21;
-                super.attack(pokemon, enemy, attackPoints);
+                super.attackCalc(pokemon, enemy, attackPoints);
                 break;
             case "grass":
                 attackPoints = 31;
-                super.attack(pokemon, enemy, attackPoints);
+                super.attackCalc(pokemon, enemy, attackPoints);
                 break;
             case "electric":
                 attackPoints = 16;
-                super.attack(pokemon, enemy, attackPoints);
+                super.attackCalc(pokemon, enemy, attackPoints);
                 break;
         }
         System.out.println("Remaning health points of " + enemy.getName() + ": " + enemy.getHp());

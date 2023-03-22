@@ -33,16 +33,28 @@ public abstract class Pokemon {
         this.type = type;
     }
 
-    // General attack method for all sorts of attacks
-    public void attack(Pokemon pokemon, Pokemon enemy, int attackPoints) {
+    public String feed() {
+        Boolean isFeeding = true;
         List<String> foods = new ArrayList<String>(Arrays.asList("firenougats", "Pokeflakes", "Pokeleafs", "Pokebrocks"));
         Scanner scanner = new Scanner(System.in);
-        System.out.println("What would you like to feed your Pokemon?: ");
-        for (String food : foods
-                ) {
-            System.out.println("\t"+ food);
+        while(isFeeding) {
+            System.out.println("What would you like to feed your Pokemon?: ");
+            for (String food : foods
+            ) {
+                System.out.println("\t"+ food);
+            }
+            String chosenFood = scanner.nextLine();
+            if(foods.contains(chosenFood)) {
+                return chosenFood;
+            } else {
+                System.out.println(chosenFood + " not a valid option. Try again.");
+            }
         }
+        return "";
+    }
 
+    // General attack method for all sorts of attacks
+    public void attackCalc(Pokemon pokemon, Pokemon enemy, int attackPoints) {
         enemy.setHp(enemy.getHp() - attackPoints);
         System.out.println(enemy.getName() + " loses " + attackPoints + " hp.");
     }

@@ -16,19 +16,19 @@ public class WaterPokemon extends Pokemon{
         switch (enemyType) {
             case "fire":
                 attackPoints = 25;
-                super.attack(pokemon, enemy, attackPoints);
+                super.attackCalc(pokemon, enemy, attackPoints);
                 break;
             case "water":
                 attackPoints = 5;
-                super.attack(pokemon, enemy, attackPoints);
+                super.attackCalc(pokemon, enemy, attackPoints);
                 break;
             case "grass":
                 attackPoints = 10;
-                super.attack(pokemon, enemy, attackPoints);
+                super.attackCalc(pokemon, enemy, attackPoints);
                 break;
             case "electric":
                 attackPoints = 15;
-                super.attack(pokemon, enemy, attackPoints);
+                super.attackCalc(pokemon, enemy, attackPoints);
                 break;
         }
         System.out.println("Remaning health points of " + enemy.getName() + ": " + enemy.getHp());
@@ -41,19 +41,19 @@ public class WaterPokemon extends Pokemon{
         switch (enemyType) {
             case "fire":
                 attackPoints = 27;
-                super.attack(pokemon, enemy, attackPoints);
+                super.attackCalc(pokemon, enemy, attackPoints);
                 break;
             case "water":
                 attackPoints = 7;
-                super.attack(pokemon, enemy, attackPoints);
+                super.attackCalc(pokemon, enemy, attackPoints);
                 break;
             case "grass":
                 attackPoints = 12;
-                super.attack(pokemon, enemy, attackPoints);
+                super.attackCalc(pokemon, enemy, attackPoints);
                 break;
             case "electric":
                 attackPoints = 17;
-                super.attack(pokemon, enemy, attackPoints);
+                super.attackCalc(pokemon, enemy, attackPoints);
                 break;
         }
         System.out.println("Remaning health points of " + enemy.getName() + ": " + enemy.getHp());
@@ -66,19 +66,19 @@ public class WaterPokemon extends Pokemon{
         switch (enemyType) {
             case "fire":
                 attackPoints = 29;
-                super.attack(pokemon, enemy, attackPoints);
+                super.attackCalc(pokemon, enemy, attackPoints);
                 break;
             case "water":
                 attackPoints = 9;
-                super.attack(pokemon, enemy, attackPoints);
+                super.attackCalc(pokemon, enemy, attackPoints);
                 break;
             case "grass":
                 attackPoints = 14;
-                super.attack(pokemon, enemy, attackPoints);
+                super.attackCalc(pokemon, enemy, attackPoints);
                 break;
             case "electric":
                 attackPoints = 19;
-                super.attack(pokemon, enemy, attackPoints);
+                super.attackCalc(pokemon, enemy, attackPoints);
                 break;
         }
         System.out.println("Remaning health points of " + enemy.getName() + ": " + enemy.getHp());
@@ -91,11 +91,11 @@ public class WaterPokemon extends Pokemon{
         switch (enemyType) {
             case "fire":
                 attackPoints = 31;
-                super.attack(pokemon, enemy, attackPoints);
+                super.attackCalc(pokemon, enemy, attackPoints);
                 break;
             case "water":
                 attackPoints = 11;
-                super.attack(pokemon, enemy, attackPoints);
+                super.attackCalc(pokemon, enemy, attackPoints);
                 break;
             case "grass":
                 attackPoints = 16;
