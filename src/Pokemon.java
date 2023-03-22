@@ -7,11 +7,12 @@ public abstract class Pokemon {
 
     // When pokemon gets the right food(equals own property) , health points ar going up
     public void eats(String food) {
-        if(this.getFood().equals(food)) {
+        if(this.getFood().toLowerCase().equals(food) || this.getFood().equals("Everything")) {
             this.setHp(this.getHp() + 20);
-            System.out.println(this.getName() + " is eating " + food + ". Health points up: +20.");
+            System.out.println(this.getName() + " likes eating " + food + ". Health points up: +20.");
         } else {
-            System.out.println(this.getName() + " doesn't eat " + food);
+            this.setHp(this.getHp() - 5);
+            System.out.println(this.getName() + " doesn't like " + food + ". Health points down: -5.");
         }
     }
 
@@ -33,19 +34,17 @@ public abstract class Pokemon {
         this.type = type;
     }
 
+    // Pick food of choice before attack. Hp up or down depending on food property pokemon
     public String feed() {
         Boolean isFeeding = true;
-        List<String> foods = new ArrayList<String>(Arrays.asList("firenougats", "Pokeflakes", "Pokeleafs", "Pokebrocks"));
+        List<String> foods = new ArrayList<String>(Arrays.asList("firenougats", "pokeflakes", "pokeleafs", "pokebrocks"));
         Scanner scanner = new Scanner(System.in);
         while(isFeeding) {
             System.out.println("What would you like to feed your Pokemon?: ");
-            for (String food : foods
-            ) {
-                System.out.println("\t"+ food);
-            }
+            System.out.println("[firenougats, pokeflakes, pokeleafs or pokebrocks]");
             String chosenFood = scanner.nextLine();
-            if(foods.contains(chosenFood)) {
-                return chosenFood;
+            if(foods.contains(chosenFood.toLowerCase())) {
+                return chosenFood.toLowerCase();
             } else {
                 System.out.println(chosenFood + " not a valid option. Try again.");
             }
@@ -53,7 +52,7 @@ public abstract class Pokemon {
         return "";
     }
 
-    // General attack method for all sorts of attacks
+    // Calculates new health points and shows message
     public void attackCalc(Pokemon pokemon, Pokemon enemy, int attackPoints) {
         enemy.setHp(enemy.getHp() - attackPoints);
         System.out.println(enemy.getName() + " loses " + attackPoints + " hp.");

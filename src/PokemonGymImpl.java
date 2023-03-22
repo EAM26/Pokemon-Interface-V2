@@ -114,7 +114,7 @@ public class PokemonGymImpl implements PokemonGym {
     @Override
     public String chooseAttackPlayer(Pokemon p){
         String chosenFood = p.feed();
-        System.out.println("Chosen food is " + chosenFood);
+        p.eats(chosenFood);
         Scanner speler_A = new Scanner(System.in);
         String type = p.getType();
         switch (type) {

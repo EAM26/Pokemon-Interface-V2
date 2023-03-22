@@ -10,6 +10,7 @@ public class FirePokemon extends Pokemon {
         super(name, level, hp, food, sound, "fire");
     }
 
+
     public void inferno(Pokemon pokemon, Pokemon enemy) {
         System.out.println(pokemon.getName() + " attacks " + enemy.getName() + " with " + this.getAttacks().get(0));
         String enemyType = enemy.getType();
