@@ -21,7 +21,19 @@ public class PokemonGymImpl implements PokemonGym {
 
         Pokemon gymPokemon = chooseGymPokemon(gymOwner);
         System.out.println(Main.ANSI_RED + gymOwner.getName() + Main.ANSI_RESET +": I'll choose you, " + gymPokemon.getName());
-        Pokemon pokemon = choosePokemon(player1);
+        // Emile: Choose unique pokemon only
+        Pokemon pokemon = null;
+        boolean invalidChoice = true;
+        while (invalidChoice) {
+            pokemon = choosePokemon(player1);
+            if(!pokemon.equals(gymPokemon)) {
+                invalidChoice = false;
+            } else {
+                System.out.println("Pleas pick a different pokemon than Brock ");
+            }
+        }
+
+
         System.out.println(Main.ANSI_GREEN + player1.getName() + Main.ANSI_RESET + ": I'll choose you, " + pokemon.getName());
 
         fightRound(player1, gymOwner, pokemon, gymPokemon);

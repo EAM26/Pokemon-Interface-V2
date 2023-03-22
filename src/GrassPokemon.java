@@ -13,22 +13,22 @@ public class GrassPokemon extends Pokemon{
         String enemyType = enemy.getType();
         int attackPoints;
         switch (enemyType) {
-            case "fire":
+            case "fire" -> {
                 attackPoints = 15;
                 super.attackCalc(pokemon, enemy, attackPoints);
-                break;
-            case "water":
+            }
+            case "water" -> {
                 attackPoints = 10;
                 super.attackCalc(pokemon, enemy, attackPoints);
-                break;
-            case "grass":
+            }
+            case "grass" -> {
                 attackPoints = 5;
                 super.attackCalc(pokemon, enemy, attackPoints);
-                break;
-            case "electric":
+            }
+            default -> {
                 attackPoints = 25;
                 super.attackCalc(pokemon, enemy, attackPoints);
-                break;
+            }
         }
         System.out.println("Remaning health points of " + enemy.getName() + ": " + enemy.getHp());
     }
@@ -38,22 +38,22 @@ public class GrassPokemon extends Pokemon{
         String enemyType = enemy.getType();
         int attackPoints;
         switch (enemyType) {
-            case "fire":
+            case "fire" -> {
                 attackPoints = 17;
                 super.attackCalc(pokemon, enemy, attackPoints);
-                break;
-            case "water":
+            }
+            case "water" -> {
                 attackPoints = 12;
                 super.attackCalc(pokemon, enemy, attackPoints);
-                break;
-            case "grass":
+            }
+            case "grass" -> {
                 attackPoints = 7;
                 super.attackCalc(pokemon, enemy, attackPoints);
-                break;
-            case "electric":
+            }
+            default -> {
                 attackPoints = 27;
                 super.attackCalc(pokemon, enemy, attackPoints);
-                break;
+            }
         }
         System.out.println("Remaning health points of " + enemy.getName() + ": " + enemy.getHp());
     }
@@ -63,30 +63,30 @@ public class GrassPokemon extends Pokemon{
         String enemyType = enemy.getType();
         int attackPoints;
         switch (enemyType) {
-            case "fire":
+            case "fire" -> {
                 attackPoints = 19;
                 super.attackCalc(pokemon, enemy, attackPoints);
                 System.out.println(pokemon.getName() + " gained " + attackPoints + " hp.");
                 pokemon.setHp(pokemon.getHp() + attackPoints);
-                break;
-            case "water":
+            }
+            case "water" -> {
                 attackPoints = 14;
                 super.attackCalc(pokemon, enemy, attackPoints);
                 System.out.println(pokemon.getName() + " gained " + attackPoints + " hp.");
                 pokemon.setHp(pokemon.getHp() + attackPoints);
-                break;
-            case "grass":
+            }
+            case "grass" -> {
                 attackPoints = 9;
                 super.attackCalc(pokemon, enemy, attackPoints);
                 System.out.println(pokemon.getName() + " gained " + attackPoints + " hp.");
                 pokemon.setHp(pokemon.getHp() + attackPoints);
-                break;
-            case "electric":
+            }
+            default -> {
                 attackPoints = 29;
                 super.attackCalc(pokemon, enemy, attackPoints);
                 System.out.println(pokemon.getName() + " gained " + attackPoints + " hp.");
                 pokemon.setHp(pokemon.getHp() + attackPoints);
-                break;
+            }
         }
         System.out.println("Remaning health points of " + enemy.getName() + ": " + enemy.getHp());
     }
@@ -96,22 +96,22 @@ public class GrassPokemon extends Pokemon{
         String enemyType = enemy.getType();
         int attackPoints;
         switch (enemyType) {
-            case "fire":
+            case "fire" -> {
                 attackPoints = 21;
                 super.attackCalc(pokemon, enemy, attackPoints);
-                break;
-            case "water":
+            }
+            case "water" -> {
                 attackPoints = 16;
                 super.attackCalc(pokemon, enemy, attackPoints);
-                break;
-            case "grass":
+            }
+            case "grass" -> {
                 attackPoints = 11;
                 super.attackCalc(pokemon, enemy, attackPoints);
-                break;
-            case "electric":
+            }
+            default -> {
                 attackPoints = 31;
                 super.attackCalc(pokemon, enemy, attackPoints);
-                break;
+            }
         }
         System.out.println("Remaning health points of " + enemy.getName() + ": " + enemy.getHp());
     }

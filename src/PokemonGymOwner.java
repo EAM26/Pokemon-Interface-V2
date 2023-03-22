@@ -4,7 +4,7 @@ public class PokemonGymOwner {
 
     private String name;
     private String town;
-    List<Pokemon> pokemons; // Is dit de lijst waar Pokemons met hp 0 of kleiner uit moeten?
+    List<Pokemon> pokemons;
 
     public PokemonGymOwner(String name, String town, List<Pokemon> pokemons) {
         this.name = name;
