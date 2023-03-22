@@ -1,4 +1,4 @@
-import java.util.List;
+import java.util.*;
 
 // Los in deze klasse alle foutmeldingen op door (abstracte) klassen met variabelen en methodes te maken en een interface met methodes (en soms een import).
 public class PokemonGymImpl implements PokemonGym {
@@ -21,7 +21,19 @@ public class PokemonGymImpl implements PokemonGym {
 
         Pokemon gymPokemon = chooseGymPokemon(gymOwner);
         System.out.println(Main.ANSI_RED + gymOwner.getName() + Main.ANSI_RESET +": I'll choose you, " + gymPokemon.getName());
-        Pokemon pokemon = choosePokemon(player1);
+        // Emile: Choose unique pokemon only
+        Pokemon pokemon = null;
+        boolean invalidChoice = true;
+        while (invalidChoice) {
+            pokemon = choosePokemon(player1);
+            if(!pokemon.equals(gymPokemon)) {
+                invalidChoice = false;
+            } else {
+                System.out.println("Pleas pick a different pokemon than Brock ");
+            }
+        }
+
+
         System.out.println(Main.ANSI_GREEN + player1.getName() + Main.ANSI_RESET + ": I'll choose you, " + pokemon.getName());
 
         fightRound(player1, gymOwner, pokemon, gymPokemon);
@@ -113,6 +125,8 @@ public class PokemonGymImpl implements PokemonGym {
 
     @Override
     public String chooseAttackPlayer(Pokemon p){
+        String chosenFood = p.feed();
+        p.eats(chosenFood);
         Scanner speler_A = new Scanner(System.in);
         String type = p.getType();
         switch (type) {
@@ -151,7 +165,6 @@ public class PokemonGymImpl implements PokemonGym {
         WaterPokemon water;
 
         String choosenAttack = attack.toLowerCase(Locale.ROOT);
-
         switch (pokemon.getType()) {
             case "fire" -> {
                 fire = new FirePokemon(pokemon.getName(), pokemon.getLevel(), pokemon.getHp(), pokemon.getFood(), pokemon.getSound());
